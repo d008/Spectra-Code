@@ -17,7 +17,7 @@ variance_direct = mean(var(fluc))
 %% Calculate Spectra
 S = zeros(size(fluc));
 B = S;
-for n =1:100
+for n =1:25
     X = fftshift(fft(fluc(:,n)));
     temp = (X.*conj(X))/(T)*dt^2;
     S(:,n) = temp;
